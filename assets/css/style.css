@@ -1,0 +1,515 @@
+@font-face {
+    font-family: MYRIADPRO;
+    src: url('../fonts/MYRIADPRO-REGULAR.OTF'), 
+         url('../fonts/MyriadPro-Light.otf');
+}
+
+@font-face {
+    font-family: MYRIADPRO-LIGHT;
+    src: url('../fonts/MyriadPro-Light.otf');
+}
+
+@font-face {
+    font-family: CINDER;
+    src: url('../fonts/Cinder.ttf');
+}
+
+:root {
+    --font-family: MYRIADPRO;
+    --font-family-light: MYRIADPRO-LIGHT;
+    --primary-color: #0F172A;
+    --secondary-color: #259FFA;
+    --third-color: #CB8C67;
+    --font-family-cinder: CINDER;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary-color);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+
+/* Navbar Styles Goes Here */
+
+nav {
+    margin-top: 25px;
+
+}
+
+nav .nav_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+    position: relative;
+}
+
+nav .nav_wrapper::before {
+    content: '';
+    background-image: url('../../assets/img/nav_bottom_border.svg');
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);   
+    text-transform: uppercase;
+}
+
+nav a.logo {
+    margin-right: auto;
+}
+
+nav button {
+    display: none;
+}
+
+/* Navbar Styles Ends Here */
+
+
+section {
+    margin: 25px 0;
+}
+
+
+/* Hero Section Goes Here */
+#hero {
+    
+}
+
+#hero .container {
+    width: 100%;
+    position: relative;
+    max-width: 1174px;
+    margin: auto;
+}
+
+#hero .container.banner_bg::before, #hero .container.banner_bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-image: url('../img/hero/hero_left.svg');
+    background-size: contain;
+    left: -50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#hero .container.banner_bg::before {
+    background-size: 45%;
+}
+
+#hero .container.banner_bg::after {
+    background-image: url('../img/hero/hero_right.svg');
+    right: -50%!important;
+    left: unset;
+    bottom: -50%;
+    top: unset;
+}
+
+#hero .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero .container .row .col .hero_banner {
+    background-image: url('../img/hero/hero_banner_background_shadow.svg');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#hero .container .row .col span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#hero .container .row .col h1 {
+    margin-top: 25px;
+    font-size: 108px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#hero .container .row .col p {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+/* Hero Section Ends Here */
+
+
+/* About Section Goes Here */
+#about {
+    margin: 80px 0;
+}
+
+#about .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+    position: relative;
+}
+
+#about .container.banner_bg::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/hero/hero_right.svg');
+    right: -50%!important;
+    left: unset;
+    bottom: -50%;
+    top: unset;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#about .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .container .row .col .card {
+    color: white;
+}
+
+#about .container .row .col .card .about_bg_shadow {
+    background-image: url('../img/about/about_banner_shadow.svg');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about .container .row .col .card span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#about .container .row .col .card h1 {
+    margin: 15px 0;
+    font-size: 48px;
+    font-family: var(--font-family-light);
+}
+
+#about ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 15px 0;
+    list-style: none;
+    align-items: center;
+}
+
+#about ul li {
+    color: var(--third-color);
+    text-transform: uppercase;
+    font-family: var(--font-family-light);
+}
+
+#about ul li.line {
+    height: 2px;
+    width: 10%;
+    background-color: var(--third-color);
+}
+
+#about .container .row .col .card p {
+    font-family: var(--font-family-light);
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+/* About Section Ends Here */
+
+
+
+/* Service Section Goes Here */
+#service {
+
+}
+
+#service .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+}
+
+#service .container span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#service .container h1 {
+    color: white;
+    font-size: 40px;
+    font-family: var(--font-family-light);
+    margin: 15px 0;
+}
+
+#service ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 25px 0;
+    list-style: none;
+    align-items: center;
+}
+
+#service ul li {
+    color: var(--third-color);
+    text-transform: uppercase;
+    font-family: var(--font-family-light);
+}
+
+#service ul li.line {
+    height: 2px;
+    width: 10%;
+    background-color: var(--third-color);
+}
+
+#service .container .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#service .container .row .col:first-child,
+#service .container .row .col:nth-child(2),
+#service .container .row .col:nth-child(3),
+#service .container .row .col:last-child {
+    background-image: url('../img/service/service_1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 375px;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+}
+
+#service .container .row .col:nth-child(2) {
+    background-image: url('../img/service/service_2.svg');
+}
+
+#service .container .row .col:nth-child(3) {
+    background-image: url('../img/service/service_3.svg');
+}
+
+#service .container .row .col:last-child {
+    background-image: url('../img/service/service_4.svg');
+}
+
+#service .container .row .col .card {
+    padding: 35px 0;
+    text-align: center;
+    color: white;
+    width: 70%;
+}
+
+#service .container .row .col .card span {
+    font-family: var(--font-family-cinder);
+    color: #565864;
+    font-size: 96px;
+}
+
+#service .container .row .col .card h2 {
+    margin-bottom: 15px;
+}
+
+#service .container .row .col .card p {
+    font-size: 14px;
+}
+
+/* Service Section Ends Here */
+
+
+/* Approach Section Goes Here */
+#approach {
+    margin: 100px 0!important;
+}
+
+#approach .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+}
+
+#approach .container .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#approach .container .row .col .card {
+    color: white;
+}
+
+#approach .container .row .col .card span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#approach .container .row .col .card h1 {
+    margin: 15px 0;
+    font-size: 42px;
+    font-family: var(--font-family-light);
+}
+
+#approach .heading_list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 25px 0;
+    list-style: none;
+    align-items: center;
+}
+
+#approach .heading_list li {
+    color: var(--third-color);
+    text-transform: uppercase;
+    font-family: var(--font-family-light);
+}
+
+#approach .heading_list li.line {
+    height: 2px;
+    width: 10%;
+    background-color: var(--third-color);
+}
+
+#approach .container .row .col .card p {
+    margin: 15px 0;
+}
+
+#approach .container .row .col .card .description_list {
+    padding: 20px;
+}
+/* Approach Section Ends Here */
+
+/* Join Section Goes Here */
+#join {
+    text-align: center;
+}
+
+#join .wrapper {
+    background-image: url('../img/map.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    width: 100%;
+}
+
+#join .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+}
+
+#join span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#join h1 {
+    margin: 15px 0;
+    font-size: 42px;
+    font-family: var(--font-family-light);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#join h1 img {
+    margin: 0 15px;
+}
+
+#join ul {
+    width: 100%;
+    max-width: 990px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 25px auto;
+    list-style: none;
+    align-items: center;
+}
+
+#join ul li {
+    color: var(--third-color);
+    text-transform: uppercase;
+    font-family: var(--font-family-light);
+}
+
+#join ul li.line {
+    height: 2px;
+    width: 10%;
+    background-color: var(--third-color);
+}
+
+#join .container .row {
+    
+}
+/* Join Section Ends Here */
