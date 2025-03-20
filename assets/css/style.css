@@ -543,6 +543,84 @@ section {
 }
 /* Join Section Ends Here */
 
+/* FAQ Section Goes Here */
+#faq {
+    margin-top: 100px;
+}   
+
+#faq .container {
+    width: 100%;
+    max-width: 1174px;
+    height: 100%;
+    margin: auto;
+    text-align: right!important;
+}
+
+#faq .container span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    
+}
+
+#faq .container h1 {
+    color: white;
+    font-size: 64px!important;
+}
+
+#faq .container .row .col .card {
+
+}
+
+#faq .container .row .col .card .collapsible {
+    background-color: transparent;
+    color: white;
+    font-size: 18px!important;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-bottom: 3px solid #414559;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#faq .container .row .col .card .collapsible:last-child {
+    border-bottom: 0!important;
+}
+
+#faq .container .row .col .card .collapsible i {
+    transition: all .3s ease;
+    font-size: 24px;
+}
+
+#faq .container .row .col .card .collapsible i.bx-minus-circle {
+    color: var(--secondary-color);
+}
+  
+#faq .container .row .col .card .active, .collapsible:hover {
+    /* background-color: #555; */
+}
+  
+#faq .container .row .col .card .content {
+    padding: 0 18px;
+    color: white;
+    text-align: left;
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    /* background-color: #f1f1f1; */
+}
+/* FAQ Section Ends Here */
+
 @media screen and (max-width: 990px) {
     body {
         overflow-x: auto;
