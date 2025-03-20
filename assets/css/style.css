@@ -102,7 +102,8 @@ section {
 
 /* Hero Section Goes Here */
 #hero {
-    
+    position: relative;
+    width: 100%;
 }
 
 #hero .container {
@@ -112,29 +113,26 @@ section {
     margin: auto;
 }
 
-#hero .container.banner_bg::before, #hero .container.banner_bg::after {
+#hero::before, #hero::after {
     content: '';
     position: absolute;
     top: 0;
-    background-image: url('../img/hero/hero_left.svg');
-    background-size: contain;
-    left: -50%;
-    background-position: center;
+    /* background-image: url('../img/hero/hero_left.svg'); */
+    background-size: contain!important;
+    left: 0%;
+    background-position: right;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     z-index: -1;
 }
 
-#hero .container.banner_bg::before {
-    background-size: 45%;
-}
-
-#hero .container.banner_bg::after {
-    background-image: url('../img/hero/hero_right.svg');
-    right: -50%!important;
+#hero::after {
+    /* background-image: url('../img/hero/hero_right.svg'); */
+    right: 0%!important;
+    background-position: left;
     left: unset;
-    bottom: -50%;
+    bottom: 0%;
     top: unset;
 }
 
@@ -182,6 +180,7 @@ section {
 /* About Section Goes Here */
 #about {
     margin: 80px 0;
+    position: relative;
 }
 
 #about .container {
@@ -191,16 +190,16 @@ section {
     position: relative;
 }
 
-#about .container.banner_bg::before {
+#about::before {
     content: '';
     position: absolute;
-    background-image: url('../img/hero/hero_right.svg');
-    right: -50%!important;
+    /* background-image: url('../img/hero/hero_right.svg'); */
+    right: 0%!important;
     left: unset;
-    bottom: -50%;
+    bottom: 0%;
     top: unset;
-    background-size: contain;
-    background-position: center;
+    background-size: auto;
+    background-position: right;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -331,7 +330,7 @@ section {
 #service .container .row .col:nth-child(3),
 #service .container .row .col:last-child {
     background-image: url('../img/service/service_1.svg');
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     height: 375px;
     display: flex;
@@ -513,3 +512,79 @@ section {
     
 }
 /* Join Section Ends Here */
+
+@media screen and (max-width: 990px) {
+    body {
+        overflow-x: auto;
+    }
+
+    .container, nav {
+        padding: 25px;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        display: block;
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        color: white;
+        font-size: 42px;
+    }
+
+    #hero .container.banner_bg::before, #hero .container.banner_bg::after,
+    #about .container.banner_bg::before {
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        bottom: 0;
+    }
+
+    #service .container .row .col:first-child, #service .container .row .col:nth-child(2), #service .container .row .col:nth-child(3), #service .container .row .col:last-child {
+        height: 660px!important;
+        background-size: contain; 
+        background-position: center;
+    }
+
+    #service .container .row .col {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+
+    #hero .container .row,
+    #about .container .row {
+        flex-wrap: wrap;
+    }
+
+    #hero .container .row .col,
+    #about .container .row .col {
+        width: 100%;
+    }
+
+    #hero .card img,
+    #about .card .about_bg_shadow img,
+    #service .card img,
+    #approach .card img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 34px!important;
+    }
+
+    #service .container .row,
+    #approach .container .row {
+        grid-template-columns: 1fr;
+    }
+
+}
