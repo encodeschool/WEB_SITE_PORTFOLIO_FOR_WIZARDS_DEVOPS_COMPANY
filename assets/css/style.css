@@ -39,7 +39,11 @@ body {
 
 nav {
     margin-top: 25px;
-
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9; */
 }
 
 nav .nav_wrapper {
@@ -102,8 +106,10 @@ section {
 
 /* Hero Section Goes Here */
 #hero {
-    position: relative;
+    /* position: relative; */
     width: 100%;
+    /* margin-top: 130px; */
+    background-color: #0F172A;
 }
 
 #hero .container {
@@ -472,6 +478,14 @@ section {
 
 #join .container .row .col {
     margin: 15px;
+}
+
+#join .container .row .col .card {
+    text-align: left!important;
+}
+
+#join .container .row .col .card span {
+    font-size: unset;
 }
 
 #join .container .row .col .card img {
