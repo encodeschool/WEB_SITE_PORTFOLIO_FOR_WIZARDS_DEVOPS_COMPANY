@@ -448,18 +448,34 @@ section {
 }
 
 #join .wrapper {
-    background-image: url('../img/map.svg');
-    background-size: contain;
+    background-image: url('../img/mapbg.svg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 120vh;
+    height: 150vh;
     width: 100%;
 }
 
 #join .container {
     width: 100%;
     max-width: 1174px;
+    height: 100%;
     margin: auto;
+}
+
+#join .container .row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join .container .row .col {
+    margin: 15px;
+}
+
+#join .container .row .col .card img {
+    width: 100%;
 }
 
 #join span {
@@ -585,6 +601,10 @@ section {
     #service .container .row,
     #approach .container .row {
         grid-template-columns: 1fr;
+    }
+
+    #join .wrapper {
+        background-size: cover;
     }
 
 }
