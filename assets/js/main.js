@@ -23,3 +23,14 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+let openBtn = document.querySelector('#open_nav_btn');
+let closeBtn = document.querySelector('#close_nav_btn');
+let menu = document.querySelector('#menu');
+openBtn.onclick = function() {
+  menu.style.top = 0;
+}
+
+closeBtn.onclick = function() {
+  menu.style.top = '-100%';
+}

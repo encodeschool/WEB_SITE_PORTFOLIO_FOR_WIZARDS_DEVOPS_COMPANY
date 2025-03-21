@@ -801,7 +801,28 @@ footer .container p {
     }
 
     nav ul {
-        display: none;
+        top: -100%;
+        position: fixed;
+        height: 100vh;
+        flex-direction: column;
+        z-index: 999;
+        background-color: #0F172A;
+        width: 100%;
+        transition: all .3s ease;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    nav button {
+        cursor: pointer;
+    }
+
+    nav ul #close_nav_btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
 
     nav button {
