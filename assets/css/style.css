@@ -621,6 +621,172 @@ section {
 }
 /* FAQ Section Ends Here */
 
+/* Contact Section Goes Here */
+#contact {
+    background-image: url(../img/contactBg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120vh;
+    margin-top: 150px;
+}
+
+#contact .container {
+    width: 100%;
+    max-width: 1174px;
+    height: 100%;
+    margin: auto;
+}
+
+#contact .container .row {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact .container .row .col {
+    
+}
+
+#contact .container .row .col .card span,
+#contact .container .row .col .card a {
+    color: var(--secondary-color);    
+}
+
+#contact .container .row .col .card p {
+    color: white;
+}
+
+#contact .container .row .col .card h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 62px;
+}
+
+#contact .container .row .col .card {
+    color: white;
+}
+
+#contact .container .row .col .card .input_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+#contact .container .row .col .card .input_wrapper input,
+#contact .container .row .col .card .input_wrapper textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 3px solid #858590;
+    outline: 0;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+#contact .container .row .col .card button {
+    background-color: #0080ff;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: 2px solid #0080ff;
+    outline: 0;
+    border-radius: 5px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#contact .container .row .col .card button:hover {
+    background-color: #0574e3;
+}
+/* Contact Section Ends Here */
+
+/* Footer Goes Here */
+footer {
+    margin: 50px 0;
+}
+
+footer .container {
+    width: 100%;
+    max-width: 1174px;
+    height: 100%;
+    margin: auto;
+}
+
+footer .container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container .row .col .card {
+    color: white;
+}
+
+footer .container .row .col .card h1 {
+    font-size: 48px;
+}
+
+footer .container .row .col:first-child .card ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 25px;
+}
+
+footer .container .row .col:first-child .card ul li {
+    margin: 5px 0;
+}
+
+footer .container .row .col:nth-child(2) .card ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+footer .container .row .col:nth-child(2) .card ul li {
+    margin: 0 15px;
+    background-color: #1e293b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+footer .container .row .col:nth-child(2) .card ul li a {
+    font-size: 24px;
+    padding: 15px 18px;
+    
+}
+
+footer .container .row .col:nth-child(2) .card ul li:hover {
+    background-color: #2563eb;
+}
+
+footer .container .row .col .card a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .container p {
+    color: white;
+}
+
+.copyrights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrights i {
+    margin-right: 10px;
+}
+/* Footer Ends Here */
+
 @media screen and (max-width: 990px) {
     body {
         overflow-x: auto;
@@ -691,8 +857,18 @@ section {
     }
 
     #service .container .row,
-    #approach .container .row {
+    #approach .container .row,
+    #contact .container .row  {
         grid-template-columns: 1fr;
+    }
+
+    #contact {
+        height: 100%;
+        margin-top: 0;
+    } 
+
+    #contact .row .col:first-child {
+        text-align: center;
     }
 
     #join .wrapper {
