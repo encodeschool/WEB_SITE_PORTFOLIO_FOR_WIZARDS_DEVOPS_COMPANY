@@ -810,7 +810,7 @@ footer .container p {
         width: 100%;
         transition: all .3s ease;
         left: 0;
-        top: 0;
+        top: -100%;
         right: 0;
         bottom: 0;
     }
