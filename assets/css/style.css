@@ -748,7 +748,7 @@ footer .container .row .col:nth-child(2) .card ul {
 }
 
 footer .container .row .col:nth-child(2) .card ul li {
-    margin: 0 15px;
+    margin: 15px;
     background-color: #1e293b;
     border-radius: 50%;
     display: flex;
@@ -894,6 +894,10 @@ footer .container p {
 
     #join .wrapper {
         background-size: cover;
+    }
+
+    footer ul {
+        flex-wrap: wrap;
     }
 
 }
