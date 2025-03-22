@@ -96,6 +96,29 @@ nav button {
     display: none;
 }
 
+nav .get_free_audit_btn {
+    margin-left: auto;
+    padding: 18px 45px;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(#0F172A, #0F172A 0) padding-box,
+    linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED) border-box;
+    font-size: unset;
+    display: block!important;
+}
+
+nav .get_free_audit_btn span {
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: unset;
+    font-weight: 900;
+}
 /* Navbar Styles Ends Here */
 
 
@@ -166,12 +189,21 @@ section {
 
 #hero .container .row .col h1 {
     margin-top: 25px;
-    font-size: 108px;
+    font-size: 98px;
     font-weight: 600;
     line-height: 100%;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: white;
+}
+
+#hero .container .row .col h1 span {
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: unset;
+    font-weight: 900;
 }
 
 #hero .container .row .col p {
