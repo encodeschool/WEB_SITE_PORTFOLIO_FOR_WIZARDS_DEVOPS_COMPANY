@@ -301,6 +301,15 @@ section {
     font-family: var(--font-family-light);
     margin: 15px 0;
     letter-spacing: 1px;
+    color: #a5a8af;
+    font-weight: 300;
+}
+
+#about .container .row .col .card p span {
+    color: white;
+    font-weight: 900!important;
+    font-size: unset;
+    text-transform: unset;
 }
 
 /* About Section Ends Here */
@@ -471,8 +480,20 @@ section {
     background-color: var(--third-color);
 }
 
-#approach .container .row .col .card p {
-    margin: 15px 0;
+#approach .container .row .col .card p,
+#approach .container .row .col .card li,
+#approach .container .row .col .card h2 {
+    font-family: var(--font-family-light);
+    color: #a5a8af;
+    font-weight: 300;
+}
+
+#approach .container .row .col .card p span,
+#approach .container .row .col .card h2 span {
+    color: white;
+    font-weight: 900!important;
+    font-size: unset;
+    text-transform: unset;
 }
 
 #approach .container .row .col .card .description_list {
@@ -864,6 +885,10 @@ footer .container p {
         border: 0;
         color: white;
         font-size: 42px;
+    }
+
+    nav .get_free_audit_btn {
+        display: none!important;
     }
 
     #hero .container.banner_bg::before, #hero .container.banner_bg::after,
