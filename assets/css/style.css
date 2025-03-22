@@ -109,6 +109,7 @@ nav .get_free_audit_btn {
     linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED) border-box;
     font-size: unset;
     display: block!important;
+    transition: all .3s ease;
 }
 
 nav .get_free_audit_btn span {
@@ -444,6 +445,12 @@ section {
     color: white;
 }
 
+#approach .container .row .col:first-child {
+    background-image: url(../img/approachBg.svg);
+    background-size: cover;
+    background-position: center ;
+}
+
 #approach .container .row .col .card span {
     font-size: 24px;
     font-weight: 600;
@@ -500,6 +507,61 @@ section {
     padding: 20px;
 }
 /* Approach Section Ends Here */
+
+/* More Reasons Section Goes Here */
+#reasons {
+    margin: 100px 0!important;
+}
+
+#reasons .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+    text-align: center;
+}
+
+#reasons .container span {
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#reasons .container h1 {
+    margin: 15px 0;
+    font-size: 42px;
+    font-weight: 900!important;
+    color: white;
+    font-family: var(--font-family-light);
+}
+
+#reasons .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#reasons .container .row .col {
+    width: calc(100% / 3.5);
+    margin: 15px;
+}
+
+#reasons .container .row .col .card {
+    color: white;
+    padding: 25px;
+}
+
+#reasons .container .row .col .card img {
+    margin-bottom: 25px;
+}
+
+#reasons .container .row .col .card h2 {
+    margin-bottom: 25px;
+    color: #3DAFE9;
+}
+/* More Reasons Section Ends Here */
 
 /* Join Section Goes Here */
 #join {
