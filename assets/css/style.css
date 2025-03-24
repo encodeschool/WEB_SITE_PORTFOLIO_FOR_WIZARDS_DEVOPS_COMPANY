@@ -749,10 +749,6 @@ section {
     color: #858590;
 }
 
-#roadmap .container .row .col .card p {
-    margin-bottom: 15px!important;
-}
-
 #roadmap .container .row .col .card p span {
     color: #94FFED;
 }
@@ -1106,7 +1102,138 @@ footer .container p {
 }
 /* Footer Ends Here */
 
+.mobile-view {
+    display: none!important;
+}
+
+:root {
+    --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
+  
+    --swiper-width: 50%;
+    --swiper-inactive-scale: .85; /* makes the other slide smaller */
+    
+    /* responsive settings */
+    --swiper-mobile-width: 70%;
+    --swiper-mobile-inactive-scale: .95;
+  }
+
+  
+  .mobile-view .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mobile-view .swiper {
+      position: relative;
+      width: 100%;
+      height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
+      overflow: hidden;
+  }
+  
+  .mobile-view .swiper-slide {
+    position: relative;
+    width: var(--swiper-width);
+    opacity: .5;
+    transform: scale(.84);
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    border-radius: 0.4285rem;
+  }
+  
+  .mobile-view .swiper-backface-hidden .swiper-slide {
+    transform: scale(.84) translateZ(0);
+  }
+          
+  .mobile-view .swiper-slide.swiper-slide-active {  
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  
+  .mobile-view .swiper-backface-hidden .swiper-slide.swiper-slide-active {
+    transform: scale(1) translateZ(0) !important;
+  }
+  
+  .mobile-view .swiper-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--swiper-image-ratio);
+  }
+      
+  .mobile-view .swiper-image .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: #929ec9;
+  }
+  
+  .mobile-view .swiper-button-next,
+  .mobile-view  .swiper-button-prev {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+    border-radius: 50%;
+    border: 1px solid white!important;
+    padding: 30px!important;
+    position: unset!important;
+  }
+  
+  .mobile-view  .swiper-button-next::after,
+  .mobile-view  .swiper-button-prev::after {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .mobile-view .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .mobile-view .wrapper .swiper-button-next {
+    margin-left: 15px;
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+    .mobile-view    .swiper {
+      height: calc(var(--swiper-mobile-width) * var(--swiper-image-ratio) / 100%);
+    }
+  
+    .mobile-view    .swiper-slide {
+      width: var(--swiper-mobile-width);
+      transform: scale(var(--swiper-mobile-inactive-scale));
+    }
+    
+    .mobile-view    .swiper-backface-hidden .swiper-slide.swiper-slide {
+      transform: scale(var(--swiper-mobile-inactive-scale)) translateZ(0);
+    }
+  
+    .mobile-view   .swiper-button-next {
+      right: calc((100% - var(--swiper-mobile-width)) / 2);
+    }
+  
+    .mobile-view   .swiper-button-prev {
+      left: calc((100% - var(--swiper-mobile-width)) / 2);
+    }
+  }
+
 @media screen and (max-width: 990px) {
+    .mobile-view {
+        display: block!important;
+    }
+
+    .pc-view {
+        display: none!important;
+    }
+
     body {
         overflow-x: auto;
     }
@@ -1217,6 +1344,35 @@ footer .container p {
 
     #join .wrapper {
         background-size: cover;
+    }
+
+    #reasons .more-reason-swiper .swiper-image {
+        color: white;
+    }
+
+    #reasons .more-reason-swiper .swiper-image h2 {
+        color: var(--secondary-color);
+        margin-bottom: 25px;
+    }
+
+    #reasons .more-reason-swiper .swiper-pagination {
+        
+    }
+
+    #reasons .more-reason-swiper .swiper-pagination {
+        position: unset!important;
+        margin-top: 50px;
+    }
+    
+    #reasons .more-reason-swiper .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: white!important;
+        width: 25px;
+        transition: all .3s ease;
+        border-radius: 5px;
+    }
+    
+    #reasons .more-reason-swiper .swiper-pagination .swiper-pagination-bullet {
+        background-color: #858590;
     }
 
     footer ul {

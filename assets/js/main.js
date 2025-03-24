@@ -48,3 +48,23 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: '.swiper-button-prev'
   }
 });
+
+
+const swiperReasonSection = new Swiper('.more-reason-swiper', {
+  loop: false,
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true
+  },
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
+});
+
