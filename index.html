@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
@@ -46,7 +47,7 @@
                     <i class="bx bx-x"></i>
                 </button>
             </ul>
-            <button class="get_free_audit_btn">
+            <button class="get_free_audit_btn" onclick="window.location.href='#contact'">
                 <span>Get Free Audit</span>
             </button>
             <button id="open_nav_btn">
@@ -58,7 +59,7 @@
 
     <!-- Hero Section Goes Here -->
     <section id="hero">
-        <div class="container banner_bg">
+        <div class="container banner_bg pc-view">
             <div class="row">
                 <div class="col">
                     <div class="card">
@@ -72,13 +73,24 @@
                 </div>
             </div>
         </div>
-        <div class="container hero_banner_bottom">
+        <div class="container hero_banner_bottom pc-view">
             <div class="row">
                 <div class="col">
                     <div class="card">
                         <span>We turn your</span>
                         <h1>ideas into reality with <span>magic of DevOps!</span></h1>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mobile-view herobg">
+            <div class="row">
+                <div class="col">
+                    <span>We turn your</span>
+                    <h1>ideas into reality with <span>magic of DevOps!</span></h1>
+                    <button class="get_free_audit_btn" onclick="window.location.href='#contact'">
+                        <span>Get Free Audit</span>
+                    </button>
                 </div>
             </div>
         </div>

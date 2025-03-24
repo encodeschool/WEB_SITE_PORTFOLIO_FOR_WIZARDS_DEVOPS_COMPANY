@@ -97,7 +97,7 @@ nav button {
     display: none;
 }
 
-nav .get_free_audit_btn {
+.get_free_audit_btn {
     margin-left: auto;
     padding: 18px 45px;
     background-color: transparent;
@@ -113,7 +113,7 @@ nav .get_free_audit_btn {
     transition: all .3s ease;
 }
 
-nav .get_free_audit_btn span {
+.get_free_audit_btn span {
     background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
     -webkit-background-clip: text;
             background-clip: text;
@@ -213,6 +213,30 @@ section {
     color: white;
     text-transform: uppercase;
     margin-top: 25px;
+}
+
+#hero .herobg {
+    height: 60vh;
+    background-image: url(../img/hero/heroBg.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hero .container.herobg .row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero .container.herobg .row h1 {
+    margin-bottom: 20px;
+}
+
+#hero .container.herobg .row button {
+    margin: auto;
 }
 /* Hero Section Ends Here */
 
@@ -1100,7 +1124,11 @@ footer .container .row .col .card a {
 }
 
 footer .container p {
-    color: white;
+    color: #858590;
+}
+
+footer a {
+    color: var(--secondary-color);
 }
 
 .copyrights {

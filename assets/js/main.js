@@ -85,3 +85,12 @@ const swiperInstances = {
     pagination: defaultPagination
   })
 };
+
+ScrollReveal().reveal(
+  '.col',
+  {
+    delay: 375,
+    duration: 500,
+    reset: true
+  }
+);
