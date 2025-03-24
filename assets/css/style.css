@@ -686,6 +686,87 @@ section {
 }
 /* Service Section Ends Here */
 
+/* Roadmap Section Goes Here */
+#roadmap {
+
+}
+
+#roadmap .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: 25px auto;
+    height: 100%;
+    text-align: left;
+}
+
+#roadmap .container span {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+#roadmap .container h1 {
+    margin: 15px 0;
+    font-size: 42px;
+    font-weight: 900!important;
+    color: white;
+    font-family: var(--font-family-light);
+}
+
+#roadmap .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+}
+
+#roadmap .container .row .col {
+    color: white;
+    padding: 25px;
+}
+
+#roadmap .container .row .col:first-child {
+    text-align: right;
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+#roadmap .container .row .col .card {
+    height: auto;
+}
+
+#roadmap .container .row .col .card h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+#roadmap .container .row .col .card p,
+#roadmap .container .row .col .card li {
+    color: #858590;
+}
+
+#roadmap .container .row .col .card p {
+    margin-bottom: 15px!important;
+}
+
+#roadmap .container .row .col .card p span {
+    color: #94FFED;
+}
+
+#roadmap .container .row .col:last-child {
+    text-align: left;
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: column;
+}
+/* Roadmap Section Ends Here */
+
 /* Join Section Goes Here */
 #join {
     text-align: center;
