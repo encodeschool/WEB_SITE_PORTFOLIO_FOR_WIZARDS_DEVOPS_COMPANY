@@ -34,6 +34,10 @@ body, html {
     font-family: var(--font-family);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-image: url(../img/htmlVg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Navbar Styles Goes Here */
@@ -134,7 +138,7 @@ section {
     /* position: relative; */
     width: 100%;
     /* margin-top: 130px; */
-    background-color: #0F172A;
+    /* background-color: #0F172A; */
 }
 
 #hero .container {
@@ -1444,6 +1448,13 @@ footer a {
 
     #roadmap .container .row .col img {
         width: 80%!important;
+    }
+
+    #contact {
+        background-image: url(../img/contactBg_mobile.png);
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     footer ul {
