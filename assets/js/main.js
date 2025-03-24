@@ -68,3 +68,22 @@ const swiperReasonSection = new Swiper('.more-reason-swiper', {
   }
 });
 
+
+const serviceTypeCarousel = new Swiper('.service_type_carouse', {
+  loop: false,
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true
+  },
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
+});
+

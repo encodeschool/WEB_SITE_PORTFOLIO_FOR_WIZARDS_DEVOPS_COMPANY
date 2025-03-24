@@ -602,13 +602,15 @@ section {
     border: 2px solid white;
 }
 
-#service_type .container .row.title .col span {
+#service_type .container .row.title .col span,
+#service_type .container .mobile-view.heading span {
     font-size: 18px;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
 
-#service_type .container .row.title .col h1 {
+#service_type .container .row.title .col h1,
+#service_type .container .mobile-view.heading h1 {
     margin: 15px 0;
     font-size: 42px;
     font-weight: 900!important;
@@ -625,7 +627,8 @@ section {
     margin-left: 25px;
 }
 
-#service_type .container .row.swiper-wrapper .col {
+#service_type .container .row.swiper-wrapper .col,
+#service_type .container .row.mobile-view .swiper-slide {
     border-radius: 5px;
     padding: 50px;
     box-shadow: 1px 2px 19px -3px #000;
@@ -639,7 +642,12 @@ section {
     border: 1px solid rgba(49, 49, 49, 0.71);
 }
 
-#service_type .container .row.swiper-wrapper .col .card {
+#service_type .container .mobile-view .swiper-image {
+    padding: 0;
+}
+
+#service_type .container .row.swiper-wrapper .col .card,
+#service_type .container .row.mobile-view .swiper-slide .swiper-image {
     background-image: url('../img/service/service_card_swiper_gradient.svg');
     width: 100%;
     height: 100%;
@@ -648,14 +656,16 @@ section {
     background-repeat: no-repeat;
 }
 
-#service_type .container .row.swiper-wrapper .col .card .card_heading {
+#service_type .container .row.swiper-wrapper .col .card .card_heading,
+#service_type .container .row.mobile-view .swiper-slide .swiper-image .card_heading {
     display: flex;
     justify-content: start;
     align-items: center;
     margin-bottom: 30px;
 }
 
-#service_type .container .row.swiper-wrapper .col .card .card_heading h2 {
+#service_type .container .row.swiper-wrapper .col .card .card_heading h2,
+#service_type .container .row.mobile-view .swiper-slide .swiper-image .card_heading h2 {
     color: white;
     font-size: 28px;
     text-align: start;
@@ -663,7 +673,8 @@ section {
     font-weight: 900!important;
 }
 
-#service_type .container .row.swiper-wrapper .col .card p {
+#service_type .container .row.swiper-wrapper .col .card p,
+#service_type .container .row.mobile-view .swiper-slide .swiper-image p {
     text-align: left;
     color: #F2F2F2;
     font-weight: 100!important;
@@ -1323,6 +1334,14 @@ footer .container p {
         width: 100%;
     }
 
+    #about .col:last-child {
+        order: 1;
+    }
+
+    #about .col:first-child {
+        order: 2;
+    }
+
     h1 {
         font-size: 34px!important;
     }
@@ -1356,10 +1375,6 @@ footer .container p {
     }
 
     #reasons .more-reason-swiper .swiper-pagination {
-        
-    }
-
-    #reasons .more-reason-swiper .swiper-pagination {
         position: unset!important;
         margin-top: 50px;
     }
@@ -1373,6 +1388,33 @@ footer .container p {
     
     #reasons .more-reason-swiper .swiper-pagination .swiper-pagination-bullet {
         background-color: #858590;
+    }
+
+    #roadmap .container .row .col {
+        padding: 0;
+        width: calc(100% / 3);
+    }
+
+    #roadmap .container .row .col:first-child {
+        text-align: left;
+    }
+
+    #roadmap .container .row .col:last-child br {
+        display: none;
+    }
+
+    #roadmap .container .row .col .card p,
+    #roadmap .container .row .col .card ul {
+        display: none;
+    }
+
+    #roadmap .container .row .col .card h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    #roadmap .container .row .col img {
+        width: 80%!important;
     }
 
     footer ul {
