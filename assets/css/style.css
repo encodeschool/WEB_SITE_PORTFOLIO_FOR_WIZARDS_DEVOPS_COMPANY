@@ -29,10 +29,11 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     background: var(--primary-color);
     font-family: var(--font-family);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Navbar Styles Goes Here */

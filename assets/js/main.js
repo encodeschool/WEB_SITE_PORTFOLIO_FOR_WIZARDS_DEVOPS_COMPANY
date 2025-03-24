@@ -35,55 +35,53 @@ closeBtn.onclick = function() {
   menu.style.top = '-100%';
 }
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+function initializeSwiper(selector, options) {
+  if (document.querySelector(selector)) {
+    return new Swiper(selector, options);
   }
-});
+  return null;
+}
 
+const defaultNavigation = {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev'
+};
 
-const swiperReasonSection = new Swiper('.more-reason-swiper', {
-  loop: false,
-  slidesPerView: 'auto',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true
-  },
-  centeredSlides: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-});
+const defaultPagination = {
+  el: '.swiper-pagination',
+  clickable: true
+};
 
+const swiperInstances = {
+  mainSwiper: initializeSwiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: defaultPagination,
+    navigation: defaultNavigation
+  }),
 
-const serviceTypeCarousel = new Swiper('.service_type_carouse', {
-  loop: false,
-  slidesPerView: 'auto',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true
-  },
-  centeredSlides: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-});
+  reasonSwiper: initializeSwiper(".more-reason-swiper", {
+    loop: false,
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+    centeredSlides: true,
+    navigation: defaultNavigation,
+    pagination: defaultPagination
+  }),
 
+  serviceSwiper: initializeSwiper(".service_type_carouse", {
+    loop: false,
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+    centeredSlides: true,
+    navigation: defaultNavigation,
+    pagination: defaultPagination
+  })
+};
