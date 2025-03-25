@@ -86,11 +86,11 @@ const swiperInstances = {
   })
 };
 
-ScrollReveal().reveal(
-  '.col',
-  {
-    delay: 375,
-    duration: 500,
-    reset: true
-  }
-);
+// ScrollReveal().reveal(
+//   '.col',
+//   {
+//     delay: 375,
+//     duration: 500,
+//     reset: true
+//   }
+// );
