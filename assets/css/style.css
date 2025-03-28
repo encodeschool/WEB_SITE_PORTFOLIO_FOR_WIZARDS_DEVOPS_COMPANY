@@ -791,6 +791,7 @@ section {
 
 #roadmap .container .row .col .card p span {
     color: #94FFED;
+    font-family: var(--font-family-light);
 }
 
 #roadmap .container .row .col:last-child {
@@ -1270,6 +1271,48 @@ footer a {
   }
 
 @media screen and (max-width: 990px) {
+
+    footer .container .row {
+        flex-wrap: wrap;
+    }
+
+    footer .container .row .col:first-child {
+        order: 2;
+    }
+
+    footer .container .row .col:last-child {
+        order: 1;
+    }
+
+    footer .container .row .col:nth-child(2) .card ul {
+        margin-bottom: 25px;
+    }
+
+    footer .container .row .col:nth-child(2) .card ul li {
+        margin: 5px;
+    }
+
+    footer .container .row .col:nth-child(2) .card ul li:first-child {
+        margin-left: 0;
+    }
+
+    footer .container .row .col:nth-child(2) .card ul li a {
+        font-size: 14px;
+    }
+
+    #faq .container {
+        text-align: left!important;
+    }
+
+    #faq .container h1 {
+        font-size: 34px!important;
+        margin-bottom: 35px;
+    }
+
+    #faq .container span {
+        font-size: 18px!important;
+    }
+
     .mobile-view {
         display: block!important;
     }
