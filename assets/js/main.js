@@ -124,6 +124,31 @@ const swiperInstances = {
   })
 };
 
+// telegram bot integration
+document.querySelector('#submit-btn').onclick = function() {
+  // let phone = document.querySelector('#phone').value;
+  let email = document.querySelector('#email').value;
+  let name = document.querySelector('#fullName').value;
+  let phone = document.querySelector('#phone').value;
+  let text = document.querySelector('#message').value;
+
+  if (email.length <= 1 && email === "") {
+      alert("Please fill the email input");
+  } else {
+      let xHttp = new XMLHttpRequest();
+      let message = "Сообщение с веб-сайта\n📧Почта: " + email + "\n" + "👦Имя: " + name + '\n' + "📞Телефон: " + phone + '\n' + "✍️Сообщение: " + text;
+
+      const token = "7613965435:AAHs9MH0dL7gSr8Y8y3M1CZtiU7VFxFFCX0";
+      const chatId = "-4785601321";
+      let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chatId + '&text=';
+      xHttp.open("GET", url + encodeURIComponent(message), true);
+      xHttp.send();
+
+      alert('Successfully sent');
+  }
+
+}
+
 
 // ScrollReveal().reveal(
 //   '.col',

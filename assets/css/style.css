@@ -1037,6 +1037,7 @@ section {
     width: 100%;
     background-color: transparent;
     border: 3px solid #858590;
+    color: white;
     outline: 0;
     border-radius: 5px;
     padding: 15px;
