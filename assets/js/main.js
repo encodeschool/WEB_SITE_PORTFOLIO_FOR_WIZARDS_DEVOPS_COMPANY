@@ -38,12 +38,11 @@ closeBtn.onclick = function() {
   menu.style.top = '-100%';
 }
 
-document.addEventListener('click', function(e) {
-  if (!menu.contains(e.target) && !openBtn.contains(e.target)) {
-    menu.style.top = '-100%';
-    console.log(e.target)
-  }
-});
+// document.addEventListener('click', function(e) {
+//   if (!menu.contains(e.target) && !openBtn.contains(e.target)) {
+//     menu.style.top = '-100%';
+//   }
+// });
 
 menu.addEventListener('click', function(e) {
   e.stopPropagation();
@@ -57,7 +56,22 @@ menuList.forEach(link => {
 
 function initializeSwiper(selector, options) {
   if (document.querySelector(selector)) {
-    return new Swiper(selector, options);
+    const swiperInstance = new Swiper(selector, options);
+
+    // Add custom logic to always keep buttons active
+    swiperInstance.on('slideChange', function () {
+      // Always ensure that the next and prev buttons are active
+      const prevButton = swiperInstance.navigation.prevEl;
+      const nextButton = swiperInstance.navigation.nextEl;
+
+      // Enable both buttons manually
+      // if (prevButton && nextButton) {
+      //   prevButton.classList.remove('swiper-button-disabled');
+      //   nextButton.classList.remove('swiper-button-disabled');
+      // }
+    });
+
+    return swiperInstance;
   }
   return null;
 }
@@ -77,18 +91,19 @@ const swiperInstances = {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
-    observer: true,
+    loop: true,  // Enable looping to ensure navigation works at all times
+    observer: false, // Disable observer to avoid interference
     pagination: defaultPagination,
     navigation: defaultNavigation
   }),
 
   reasonSwiper: initializeSwiper(".more-reason-swiper", {
-    loop: false,
+    loop: true,  // Enable looping
     slidesPerView: 'auto',
-    observer: true,
+    observer: false, // Disable observer to avoid interference
     autoplay: {
       delay: 5000,
-      disableOnInteraction: true
+      disableOnInteraction: false // Keep autoplay active after interaction
     },
     centeredSlides: true,
     navigation: defaultNavigation,
@@ -96,18 +111,19 @@ const swiperInstances = {
   }),
 
   serviceSwiper: initializeSwiper(".service_type_carouse", {
-    loop: false,
+    loop: true,  // Enable looping
     slidesPerView: 'auto',
-    observer: true,
+    observer: false, // Disable observer to avoid interference
     autoplay: {
       delay: 5000,
-      disableOnInteraction: true
+      disableOnInteraction: false // Keep autoplay active after interaction
     },
     centeredSlides: true,
     navigation: defaultNavigation,
     pagination: defaultPagination
   })
 };
+
 
 // ScrollReveal().reveal(
 //   '.col',
