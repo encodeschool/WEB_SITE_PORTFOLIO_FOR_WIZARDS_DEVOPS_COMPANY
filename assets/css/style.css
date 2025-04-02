@@ -740,8 +740,9 @@ section {
 }
 
 #roadmap .container span {
-    font-size: 18px;
-    text-transform: uppercase;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-style: italic;
     color: var(--secondary-color);
 }
 
@@ -1116,7 +1117,9 @@ footer .container .row .col:nth-child(2) .card ul li {
 footer .container .row .col:nth-child(2) .card ul li a {
     font-size: 24px;
     padding: 15px 18px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer .container .row .col:nth-child(2) .card ul li:hover {
@@ -1272,6 +1275,15 @@ footer a {
 
 @media screen and (max-width: 990px) {
 
+    #service_type .container .row.swiper-wrapper .col .card .card_heading h2, #service_type .container .row.mobile-view .swiper-slide .swiper-image .card_heading h2 {
+        font-size: 18px;
+    }
+
+    #service_type .container .row.swiper-wrapper .col .card p, #service_type .container .row.mobile-view .swiper-slide .swiper-image p {
+        color: #fff;
+        font-size: 14px;
+    }
+
     footer .container .row {
         flex-wrap: wrap;
     }
@@ -1339,7 +1351,7 @@ footer a {
         height: 100vh;
         flex-direction: column;
         z-index: 999;
-        background-color: #0F172A;
+        background-color: #4F5267;
         width: 100%;
         transition: all .3s ease;
         left: 0;

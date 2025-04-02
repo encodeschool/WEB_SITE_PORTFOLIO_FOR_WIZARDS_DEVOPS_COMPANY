@@ -27,13 +27,33 @@ for (i = 0; i < coll.length; i++) {
 let openBtn = document.querySelector('#open_nav_btn');
 let closeBtn = document.querySelector('#close_nav_btn');
 let menu = document.querySelector('#menu');
-openBtn.onclick = function() {
+let menuList = document.querySelectorAll('#menu a');
+
+openBtn.onclick = function(e) {
+  e.stopPropagation();
   menu.style.top = 0;
 }
 
 closeBtn.onclick = function() {
   menu.style.top = '-100%';
 }
+
+document.addEventListener('click', function(e) {
+  if (!menu.contains(e.target) && !openBtn.contains(e.target)) {
+    menu.style.top = '-100%';
+    console.log(e.target)
+  }
+});
+
+menu.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+menuList.forEach(link => {
+  link.addEventListener('click', function() {
+    menu.style.top = '-100%';
+  })
+});
 
 function initializeSwiper(selector, options) {
   if (document.querySelector(selector)) {
@@ -57,6 +77,7 @@ const swiperInstances = {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
+    observer: true,
     pagination: defaultPagination,
     navigation: defaultNavigation
   }),
@@ -64,6 +85,7 @@ const swiperInstances = {
   reasonSwiper: initializeSwiper(".more-reason-swiper", {
     loop: false,
     slidesPerView: 'auto',
+    observer: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: true
@@ -76,6 +98,7 @@ const swiperInstances = {
   serviceSwiper: initializeSwiper(".service_type_carouse", {
     loop: false,
     slidesPerView: 'auto',
+    observer: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: true
