@@ -88,7 +88,7 @@ const defaultPagination = {
 
 const swiperInstances = {
   mainSwiper: initializeSwiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     freeMode: true,
     loop: true,  // Enable looping to ensure navigation works at all times

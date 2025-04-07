@@ -671,6 +671,12 @@ section {
     border: 1px solid rgba(49, 49, 49, 0.71);
 }
 
+#service_type .container .row.pc-view .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
 #service_type .container .mobile-view .swiper-image {
     padding: 0;
 }
