@@ -1113,12 +1113,16 @@ footer .container .row .col:nth-child(2) .card ul {
 
 footer .container .row .col:nth-child(2) .card ul li {
     margin: 15px;
-    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
+    background: #1e293b;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .3s ease;
+}
+
+footer .container .row .col:nth-child(2) .card ul li:hover {
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
 }
 
 footer .container .row .col:nth-child(2) .card ul li a {
@@ -1131,9 +1135,17 @@ footer .container .row .col:nth-child(2) .card ul li a {
     font-size: 18px;
 }
 
-footer .container .row .col:nth-child(2) .card ul li:hover {
-    background-color: #2563eb;
+footer .container .row .col:nth-child(2) .card ul li a {
+    color: white;
 }
+
+footer .container .row .col:nth-child(2) .card ul li:hover a {
+    color: black;
+}
+
+/* footer .container .row .col:nth-child(2) .card ul li:hover {
+    background-color: #2563eb;
+} */
 
 footer .container .row .col .card a {
     color: white;
