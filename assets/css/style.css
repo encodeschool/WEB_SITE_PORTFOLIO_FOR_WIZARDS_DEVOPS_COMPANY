@@ -1107,7 +1107,7 @@ footer .container .row .col:nth-child(2) .card ul {
 
 footer .container .row .col:nth-child(2) .card ul li {
     margin: 15px;
-    background-color: #1e293b;
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1121,6 +1121,8 @@ footer .container .row .col:nth-child(2) .card ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    font-size: 18px;
 }
 
 footer .container .row .col:nth-child(2) .card ul li:hover {
@@ -1398,6 +1400,22 @@ footer a {
         height: 660px!important;
         background-size: contain; 
         background-position: center;
+    }
+
+    #about .container .row .col:first-child{
+        order: 1;
+    }
+
+    #approach .container .row .col:first-child {
+        order: 2;
+    }
+
+    #about .container .row .col:last-child {
+        order: 2;
+    }
+
+    #approach .container .row .col:last-child {
+        order: 1;
     }
 
     #service .container .row .col {
