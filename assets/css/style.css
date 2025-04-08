@@ -1171,6 +1171,161 @@ footer a {
 }
 /* Footer Ends Here */
 
+
+
+
+/* AI model section Goes Here */
+#ai {
+    position: fixed;
+    bottom: 50px;
+    right: 75px;
+    z-index: 9999;
+}
+
+#ai .container {
+    position: relative;
+}
+
+#ai .container .button_wrapper {
+    position: absolute;
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
+    padding: 15px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    background-position: 100%;
+    animation: gradient .1s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#ai .container .chat_wrapper {
+    display: none;
+    position: absolute;
+}
+
+#ai .container .chat_wrapper.active {
+    width: 350px;
+    height: 550px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+#ai .container .chat_wrapper .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+#ai .container .chat_wrapper .row .col {
+    font-family: var(--font-family-light);
+}
+
+#ai .container .chat_wrapper .row .col h1 {
+    font-size: 18px;
+}
+
+#ai .container .chat_wrapper .row .col p {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+#ai .container .chat_wrapper .row .col .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+#ai .container .chat_wrapper .row.border-top {
+    border-top: 1px solid #e7e7e7;
+}
+
+#ai .container .chat_wrapper .row.body_row {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#ai .container .chat_wrapper .row.body_row .col img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#ai .container .chat_wrapper .row.chat_row {
+    width: 100%;
+}
+
+#ai .container .chat_wrapper .row.chat_row .col {
+    width: 100%;
+}
+
+#ai .container .chat_wrapper .row.chat_row .col {
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    padding: 15px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#ai .container .chat_wrapper .row.chat_row .col input,
+#ai .container .chat_wrapper .row.chat_row .col button {
+    outline: 0;
+    border: 0;
+    height: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+}
+
+#ai .container .chat_wrapper .row.chat_row .col button {
+    width: unset;
+    padding: 13px 13px;
+    background: #e1e1e1;
+    color: black;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: all .2s ease;
+    border-radius: 50%;
+}
+
+#ai .container .chat_wrapper .row.chat_row .col button.active {
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED);
+}
+
+/* AI model section Ends Here */
+
+
+
+
 .mobile-view {
     display: none!important;
 }
