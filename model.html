@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Wizards - Main Page</title>
+    <title>DevOps Wizards - AI MODEL</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -18,10 +18,17 @@
     <!-- Chat Section Goes Here -->
     <section id="chat">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row outrow">
+                <div class="col instruction_col">
+                    <h1>Here gonna be instructions</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p> <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p> <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p>
+                </div>
+                <div class="col row justify-content-between">
+                    <div class="output_container"></div>
                     <div class="card">
-                        <h1 align="center">Hi 👋, SomeBody. <br>How can I help you today?</h1>
+                        <h1 class="greeting_header" align="center">Hi 👋, SomeBody. <br>How can I help you today?</h1>
                         <div class="input_wrapper">
                             <form action="">
                                 <textarea class="chat_request" name="" id="" placeholder="What do you want to know?"></textarea>
@@ -35,7 +42,7 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <button class="ai_request_btn">
+                                        <button type="button" class="ai_request_btn">
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[2] relative"><path d="M5 11L12 4M12 4L19 11M12 4V21" stroke="currentColor"></path></svg>
                                         </button>
                                     </div>
@@ -48,21 +55,32 @@
         </div>
     </section>
     <!-- Chat Section Ends Here -->
-
-    <script src="assets/js/main.js"></script>
+     
     <script>
-        let textarea = document.querySelectorAll('.chat_request');
+        let textarea = document.querySelector('.chat_request');
         let requestBtn = document.querySelector('.ai_request_btn');
+        let greetingH1 = document.querySelector('.greeting_header');
 
-        textarea.forEach((el) => {
-            el.addEventListener('keyup', function(e) {
-                if (el.value.length > 0) {
-                    requestBtn.classList.add('active');
-                } else {
-                    requestBtn.classList.remove('active');
-                }
-            });
+        textarea.addEventListener('keyup', function(e) {
+            if (textarea.value.length > 0) {
+                requestBtn.classList.add('active');
+            } else {
+                requestBtn.classList.remove('active');
+            }
         });
+
+        requestBtn.onclick = function(e) {
+            let output = document.querySelector('.output_container');
+            greetingH1.classList.add('hide');
+            output.parentElement.classList.add('flex-column');
+            output.innerHTML += `
+
+                <div class="card">
+                    <p>${textarea.value}</p>
+                </div>
+            
+            `;
+        }        
 
     </script>
 
