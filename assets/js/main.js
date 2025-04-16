@@ -152,8 +152,6 @@ document.querySelector('#submit-btn').onclick = function() {
 let aiHelperBtnOpen =  document.querySelector('.button_wrapper');
 let chat = document.querySelector('.chat_wrapper');
 let aiHelperBtnClose =  document.querySelector('.close-btn');
-let input = document.querySelector('.ai_request');
-let requestBtn = document.querySelector('.ai_request_btn');
 
 aiHelperBtnOpen.addEventListener('click', function(e) {
   chat.classList.add('active');
@@ -161,14 +159,6 @@ aiHelperBtnOpen.addEventListener('click', function(e) {
 
 aiHelperBtnClose.addEventListener('click', function(e) {
   chat.classList.remove('active');
-});
-
-input.addEventListener('keyup', function(e) {
-  if (input.value.length > 0) {
-    requestBtn.classList.add('active');
-  } else {
-    requestBtn.classList.remove('active');
-  }
 });
 
 // ScrollReveal().reveal(

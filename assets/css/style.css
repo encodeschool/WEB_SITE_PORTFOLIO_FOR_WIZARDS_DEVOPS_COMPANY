@@ -86,6 +86,22 @@ nav ul li {
     padding: 15px;
 }
 
+nav ul .ai_model_nav_link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: -webkit-linear-gradient(#5C49EA, #3DAFE9, #94FFED);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul .ai_model_nav_link a svg{
+    width: 25px;
+    margin-right: 10px;
+    fill: linear-gradient(#5C49EA, #3DAFE9, #94FFED);
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -1709,3 +1725,109 @@ footer a {
     }
 
 }
+
+/* Chat AI Model Goes Here */
+#chat {
+    height: 100vh;
+    margin: unset!important;
+}
+
+#chat .container {
+    width: 100%;
+    max-width: 1174px;
+    margin: auto;
+    height: 100%;
+}
+
+#chat .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#chat .container .row .col {
+    width: 100%;
+    max-width: 768px;
+}
+
+#chat .container .row .col .card {
+    color: white;
+    width: 100%;
+}
+
+#chat .container .row .col .card h1 {
+    font-size: 40px;
+    font-family: var(--font-family-light);
+}
+
+#chat .container .row .col .card .input_wrapper {
+    width: 100%;
+    margin-top: 25px;
+
+    background: rgba( 15, 23, 42, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba(16, 19, 59, 0.37);
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    border-radius: 5px;
+    padding: 25px;
+}
+
+#chat .container .row .col .card .input_wrapper textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+#chat .container .row .col .card .input_wrapper svg {
+    color: #fff;
+}
+
+#chat .container .row .col .card .input_wrapper .upload_file input[type='file'] {
+    display: none;
+}
+
+#chat .container .row .col .card .input_wrapper .upload_file label,
+#chat .container .row .col .card .input_wrapper .row.justify-content-between .col button {
+    border: 1px solid rgba( 255, 255, 255, 0.18 );;
+    padding: 6px 9px;
+    cursor: pointer;
+    display: block;
+    transition: all .3s ease;
+    width:min-content;
+    border-radius: 50%;
+}
+
+#chat .container .row .col .card .input_wrapper .upload_file label:hover,
+#chat .container .row .col .card .input_wrapper .row.justify-content-between .col button:hover {
+    background-color: var(--primary-color);
+}
+
+.justify-content-between {
+    justify-content: space-between!important;
+}
+
+#chat .container .row .col .card .input_wrapper .row.justify-content-between .col {
+    width: unset;
+}
+
+#chat .container .row .col .card .input_wrapper .row.justify-content-between .col button {
+    background-color: transparent;
+    transition: all .3s ease;
+}
+
+#chat .container .row .col .card .input_wrapper .row.justify-content-between .col .ai_request_btn.active {
+    background: linear-gradient(#0F172A, #0F172A 0) padding-box,
+    linear-gradient(to top, #5C49EA, #3DAFE9, #94FFED) border-box;
+    transition: all .3s ease;
+}
+
+/* Chat AI Model Ends Here */
