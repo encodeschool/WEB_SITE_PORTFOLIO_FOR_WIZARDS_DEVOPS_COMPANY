@@ -26,7 +26,11 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p>
                 </div>
                 <div class="col row justify-content-between">
-                    <div class="output_container"></div>
+                    <div class="output_container">
+                        <div class="row">
+
+                        </div>
+                    </div>
                     <div class="card">
                         <h1 class="greeting_header" align="center">Hi 👋, SomeBody. <br>How can I help you today?</h1>
                         <div class="input_wrapper">
@@ -69,17 +73,37 @@
             }
         });
 
+        
+        const API_KEY = 'c4a5f0312087d7f059b42efc5977fde1';
+        
+
         requestBtn.onclick = function(e) {
             let output = document.querySelector('.output_container');
+            output.style.width = '100%';
             greetingH1.classList.add('hide');
             output.parentElement.classList.add('flex-column');
-            output.innerHTML += `
+            let row = output.querySelector('.row');
+            row.innerHTML += `
 
-                <div class="card">
+                <div class="col">
                     <p>${textarea.value}</p>
                 </div>
             
             `;
+
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${textarea.value}&appid=${API_KEY}`)
+            .then(res => res.json())
+            .then(
+                data => 
+                row.innerHTML += `
+
+                    <div class="col col_left">
+                        <p>The weather in ${data['name']} is equal to ${Math.round(data['main']['temp']-273.15)}</p>
+                    </div>
+
+                `
+            )
+            .catch(err => console.error(err));
         }        
 
     </script>
