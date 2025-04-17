@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Wizards - AI MODEL</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    
+    <!-- Chat Section Goes Here -->
+    <section id="chat">
+        <div class="container">
+            <div class="row outrow">
+                <div class="col instruction_col">
+                    <h1>Here gonna be instructions</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p> <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p> <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod est fugit cupiditate cumque eaque animi incidunt quaerat pariatur magni, quam unde reprehenderit neque porro vero atque soluta obcaecati veniam?</p>
+                </div>
+                <div class="col row justify-content-between">
+                    <div class="output_container">
+                        <div class="row">
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1 class="greeting_header" align="center">Hi 👋, SomeBody. <br>How can I help you today?</h1>
+                        <div class="input_wrapper">
+                            <form action="">
+                                <textarea class="chat_request" name="" id="" placeholder="What do you want to know?"></textarea>
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <div class="upload_file">
+                                            <label for="file-upload">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[2] text-fg-secondary group-hover/attach-button:text-fg-primary transition-colors duration-100"><path d="M10 9V15C10 16.1046 10.8954 17 12 17V17C13.1046 17 14 16.1046 14 15V7C14 4.79086 12.2091 3 10 3V3C7.79086 3 6 4.79086 6 7V15C6 18.3137 8.68629 21 12 21V21C15.3137 21 18 18.3137 18 15V8" stroke="currentColor"></path></svg>
+                                            </label>
+                                            <input type="file" name="" id="file-upload">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="ai_request_btn">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[2] relative"><path d="M5 11L12 4M12 4L19 11M12 4V21" stroke="currentColor"></path></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chat Section Ends Here -->
+     
+    <script>
+        let textarea = document.querySelector('.chat_request');
+        let requestBtn = document.querySelector('.ai_request_btn');
+        let greetingH1 = document.querySelector('.greeting_header');
+
+        textarea.addEventListener('keyup', function(e) {
+            if (textarea.value.length > 0) {
+                requestBtn.classList.add('active');
+            } else {
+                requestBtn.classList.remove('active');
+            }
+        });
+
+        
+        const API_KEY = 'c4a5f0312087d7f059b42efc5977fde1';
+        
+
+        requestBtn.onclick = function(e) {
+            let output = document.querySelector('.output_container');
+            output.style.width = '100%';
+            greetingH1.classList.add('hide');
+            output.parentElement.classList.add('flex-column');
+            let row = output.querySelector('.row');
+            row.innerHTML += `
+
+                <div class="col">
+                    <p>${textarea.value}</p>
+                </div>
+            
+            `;
+
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${textarea.value}&appid=${API_KEY}`)
+            .then(res => res.json())
+            .then(
+                data => 
+                row.innerHTML += `
+
+                    <div class="col col_left">
+                        <p>The weather in ${data['name']} is equal to ${Math.round(data['main']['temp']-273.15)}</p>
+                    </div>
+
+                `
+            )
+            .catch(err => console.error(err));
+        }        
+
+    </script>
+
+    
+</body>
+</html>
